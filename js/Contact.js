@@ -1,4 +1,5 @@
 /**UC4 Validating all fields by creating contact class */
+/**UC7 using getters and setters */
 class Contact{
 
     /**validating first name 
@@ -16,6 +17,9 @@ class Contact{
         else
             throw 'Invalid Name';
     }
+    get fullName(){
+        return this._fullName;
+    }
     
 
 
@@ -32,6 +36,10 @@ class Contact{
          else
              throw 'Invalid Mobile Number';
      }
+     get tel(){
+        return this._tel;
+    }
+
     /**Validating address 
      * must have multiple words and each word with min 3 characters
      */
@@ -47,6 +55,9 @@ class Contact{
                 throw 'Invalid Address';
         }
         this._address = address;
+    }
+    get address(){
+        return this._address;
     }
     
 
