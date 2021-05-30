@@ -4,8 +4,8 @@ window.addEventListener('DOMContentLoaded',(event) =>{
 
     fullName.addEventListener('input',function () {
         if(fullName.value.length == 0) {
-            textError.textContent = "";
-            return
+            fullName.textContent = "";
+            return;
         }
         try{
             (new Contact()).fullName = fullName.value;
@@ -15,16 +15,15 @@ window.addEventListener('DOMContentLoaded',(event) =>{
         }
     });
 
-
     const phoneNo = document.querySelector('#tel');
     const phoneError = document.querySelector('.mobile-error');
     phoneNo.addEventListener('input',function () {
         if(phoneNo.value.length == 0){
             phoneError.textContent = "";
-            return
+            return;
         }
         try{
-            (new Contact()).phoneNumber = phoneNo.value;
+            (new Contact()).phoneNo = phoneNo.value;
             phoneError.textContent ="";
         }catch (e) {
             phoneError.textContent = e;
@@ -37,7 +36,7 @@ window.addEventListener('DOMContentLoaded',(event) =>{
     address.addEventListener('input', function () {
         if (address.value.length == 0) {
             addressError.textContent = "";
-            return
+            return;
         }
         try {
             (new Contact()).address = address.value;
@@ -46,45 +45,69 @@ window.addEventListener('DOMContentLoaded',(event) =>{
             addressError.textContent = e;
         }
     });
+});    
     
-    /**UC6 */
+/**UC6 */
 
-    const save = (event) => {
-        try{
-            let contact = saveData();
-            createAndUpdateStorage(contact);
-        }catch(e){
-            return ;
-        }
-    };
-
-    /**Adding to local storage and update  */
-    function createAndUpdateStorage(addContactData) {
-
-        let contactDataList = JSON.parse(localStorage.getItem("ContactDataList"));
-
-        if(contactDataList != undefined) {
-            contactDataList.push(addContactData);
-        } else {
-            contactDataList = [addContactData];
-        }
-        alert(contactDataList.toString());
-        localStorage.setItem("ContactDataList", JSON.stringify(contactDataList));
+const save = () => {
+    try{
+        
+        let contact = saveData();
+        createAndUpdateStorage(contact);
+    }catch(e){
+        return ;
     }
+}; 
 
-    function saveData(){
-        let contact = new Contact();
-        contact._fullName = getInputValueById('#fullName');
-        contact._address = getInputValueById('#address');
-        contact._phoneNumber = getInputValueById('#tel');
-        contact._city = getInputValueById('#city');
-        contact._state = getInputValueById('#state');
-        contact._zip = getInputValueById('#zip');
+const saveData = () => {
+    let contact = new Contact();
+    try{
+        contact.fullName = getInputValueById('#fullName');
+    }catch(e){
+        setValue('.test-error',e);
+        throw e;
     }
+    contact.fullName = getInputValueById('#fullName');
+    contact.address = getInputValueById('#address');
+    contact.phoneNumber = getInputValueById('#tel');
+    contact.city = getInputValueById('#city');
+    contact.state = getInputValueById('#state');
+    contact.zip = getInputValueById('#zip');
+    alert(contact.toString());
+    return contact;
+}
 
-    const getInputValueById = (id) => {
-        let value = document.querySelector(id).value;
-        return value;
+ /**Adding to local storage and update  */
+ function createAndUpdateStorage(contact) {
+
+    let contactDataList = JSON.parse(localStorage.getItem("ContactDataList"));
+
+    if(contactDataList != undefined) {
+        contactDataList.push(contact);
+    } else {
+        contactDataList = [contact];
     }
+    alert(contactDataList.toString());
+    localStorage.setItem("ContactDataList", JSON.stringify(contactDataList));
+}
 
-})
+const getInputValueById = (id) => {
+    let value = document.querySelector(id).value;
+    return value;
+}
+
+/**UC9 Resetting the form by using RESET Button */
+const resetForm = () => {
+    setValue('#fullName','');
+    setValue('#address','');
+    setValue('#tel','');
+    setValue('#city','');
+    setValue('#state','');
+    setValue('#zip','');
+}
+
+// const setValue = (id , value) => {
+//     const element = document.querySelector(id);
+//     element.value = value;
+// }
+
