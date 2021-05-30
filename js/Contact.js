@@ -59,6 +59,9 @@ class Contact{
     get zip() {return this._zip;}
     set zip(zip) {this._zip = zip;}
 
+    get id() {return this._id;}
+    set id(id) {this._id = id;}
+
     //Methods
     toString() {
         return '[ FullName : ' + this.fullName + ' Address : '

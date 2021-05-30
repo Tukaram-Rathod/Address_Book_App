@@ -1,18 +1,18 @@
 <!--UC1 Creating Address Book Form UI as web page
-Added header element on top having text AddressBook and also an image-->
+Added header element on top having text AddressBook and also an image--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/AddressBook.css">
-    <title>Address Book Form</title>
+    <title>Addressbook Form</title>
 </head>
+
 <body>
-    <header class="header-containt header">
-        <div class="logo-containt">
+    <header class="header-content header">
+        <div class="logo-content">
             <img src="../assets/images/logo.jpeg" alt="logo">
             <div>
                 <span class="add-text">ADDRESS</span><br>
@@ -20,6 +20,7 @@ Added header element on top having text AddressBook and also an image-->
             </div>
         </div>
     </header>
+
 
     <!--UC2 Creating form with header line ADDRESS BOOK FORM-->
     <div class="Form-content">
@@ -35,7 +36,7 @@ Added header element on top having text AddressBook and also an image-->
 
            <!--Adding field for full name-->
             <div class="row-content">
-                <label class="label text" form="fullName">Full name
+                <label class="label text" form="fullname">Full name
                     <input class="input" type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name" required>
                     <error-output class="text-error" for="text"></error-output>
                 </label>
@@ -129,7 +130,7 @@ Added header element on top having text AddressBook and also an image-->
             </div>
         </form>
     </div>
-    <script src="../js/AddressBook.js"></script>
-    <script src="../js/Contact.js"></script>
+    <script defer src="../js/AddressBook.js"></script>
+    <script defer src="../js/Contact.js"></script>
 </body>
 </html>
