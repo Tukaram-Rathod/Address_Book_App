@@ -46,19 +46,31 @@ window.addEventListener('DOMContentLoaded',(event) =>{
             addressError.textContent = e;
         }
     });
+    
+    /**UC6 */
 
-    const zip = document.querySelector('#zip');
-    const zipError = document.querySelector('.zip-error');
-    zip.addEventListener('input', function () {
-        if (zip.value.length == 0) {
-            zipError.textContent = "";
-            return;
+    const save = (event) => {
+        try{
+            let contact = saveData();
+            createAndUpdateStorage(contact);
+        }catch(e){
+            return ;
         }
-        try {
-            (new Contact()).zip = zip.value;;
-            zipError.textContent = "";
-        } catch (e) {
-            zipError.textContent = e;
-        }
-    });
+    };
+
+    function saveData(){
+        let contact = new Contact();
+        contact._fullName = getInputValueById('#fullName');
+        contact._address = getInputValueById('#address');
+        contact._phoneNumber = getInputValueById('#tel');
+        contact._city = getInputValueById('#city');
+        contact._state = getInputValueById('#state');
+        contact._zip = getInputValueById('#zip');
+    }
+
+    const getInputValueById = (id) => {
+        let value = document.querySelector(id).value;
+        return value;
+    }
+
 })
