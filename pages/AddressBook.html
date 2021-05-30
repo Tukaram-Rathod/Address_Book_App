@@ -36,27 +36,27 @@ Added header element on top having text AddressBook and also an image-->
 
            <!--Adding field for full name-->
             <div class="row-content">
-                <label class="label text" form="fullName">Full name
+                <label class="label-text" form="fullName">Full name
                     <input class="input" type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name" required>
-                    <error-output class="text-error" for="text"></error-output>
-                </label>
+                    <error-output class="text-error" for="text"></error-output>  
+                </label>                  
             </div>
 
 
             <!-- Adding field for phone number -->
             <div class="row-content">
-                <label class="label text" form="tel">Phone Number
-                    <input class="input" type="tel" id="tel" name="input" placeholder="Enter Phone Number" required>
-                    <error-output class="text-error" for="text"></error-output>
-                </label>
+                <label class="label-text" form="tel">Phone Number
+                    <input class="input" type="text" id="tel" name="tel" placeholder="Enter Phone Number" required>
+                    <error-output class="text-error" for="text"></error-output> 
+                </label>               
             </div>
 
             <!-- Adding field for address -->
             <div class="row-content">
-                <label class="label text" form="address">Address
-                    <input class="input address-input" type="text" id="address" placeholder="Address" required>
-                    <error-output class="text-error" for="text"></error-output>
-                </label>
+                <label class="label-text" form="address">Address
+                    <input class="input address-input" type="text" id="address" name="address" placeholder="Address" required>
+                    <error-output class="text-error" for="text"></error-output> 
+                </label>               
             </div>
 
             <!-- Adding input field for selecting city name and state name -->
@@ -80,7 +80,8 @@ Added header element on top having text AddressBook and also an image-->
                         <option value="Bhusawal">Bhusawal</option>
                         <option value="Osmanabad">Osmanabad</option>
                     </select>
-                </label>
+                </label>    
+                
 
                 <label class="label-text-select" for="state">State
                 <select id="state" name="state">
@@ -114,9 +115,9 @@ Added header element on top having text AddressBook and also an image-->
                     <option value="Delhi">Delhi</option>
                     <option value="Ladakh">Ladakh</option>
                 </select>
-                </label>
+            </label>   
 
-                <label class="label-text-select" for="zip">Zip Code
+                <label class="label-text-select" for="zip">Zip Code 
                     <input class="input" type="text" id="zipcode" name="zipcode" placeholder="Zip code" required>
                 </label>
             </div>
@@ -124,8 +125,9 @@ Added header element on top having text AddressBook and also an image-->
             <!--Added buttons for saving and resetting-->
             <div class="buttonParent">
                 <div class="submit-reset">
+                    <a href="../pages/home.html">
                     <button type="submit" class="button submitButton" id="submitButton">Add</button>
-                    <button type="reset" class="button resetButton">Reset</button>
+                    <button type="reset" class="button resetButton">Reset</button></a>
                 </div>
             </div>
         </form>

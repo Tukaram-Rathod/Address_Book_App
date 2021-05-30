@@ -10,7 +10,7 @@ class Contact{
         return this._fullName;
     }
     set fullName(fullName){
-        let fullNamePattern = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+        let fullNamePattern = RegExp('^[A-Z_]{1}[a-zA-Z_ ]{3,}$');
         if(fullNamePattern.test(fullName)){
             this._fullName = fullName;
         }
@@ -68,8 +68,8 @@ class Contact{
     }
         
     // UC5
-    get id() {return this._id;}
-    set id(id) {this._id = id;}
+    // get id() {return this._id;}
+    // set id(id) {this._id = id;}
 
     //Methods
     toString(){
