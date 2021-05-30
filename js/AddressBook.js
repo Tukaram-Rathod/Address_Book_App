@@ -58,6 +58,20 @@ window.addEventListener('DOMContentLoaded',(event) =>{
         }
     };
 
+    /**Adding to local storage and update  */
+    function createAndUpdateStorage(addContactData) {
+
+        let contactDataList = JSON.parse(localStorage.getItem("ContactDataList"));
+
+        if(contactDataList != undefined) {
+            contactDataList.push(addContactData);
+        } else {
+            contactDataList = [addContactData];
+        }
+        alert(contactDataList.toString());
+        localStorage.setItem("ContactDataList", JSON.stringify(contactDataList));
+    }
+
     function saveData(){
         let contact = new Contact();
         contact._fullName = getInputValueById('#fullName');
