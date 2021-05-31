@@ -36,7 +36,7 @@ Added header element on top having text AddressBook and also an image-->
 
            <!--Adding field for full name-->
             <div class="row-content">
-                <label class="label-text" form="fullName">Full name
+                <label class="label text" for="fullName">Full name
                     <input class="input" type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name" required>
                     <error-output class="text-error" for="text"></error-output>  
                 </label>                  
@@ -45,23 +45,24 @@ Added header element on top having text AddressBook and also an image-->
 
             <!-- Adding field for phone number -->
             <div class="row-content">
-                <label class="label-text" form="tel">Phone Number
-                    <input class="input" type="text" id="tel" name="tel" placeholder="Enter Phone Number" required>
-                    <error-output class="text-error" for="text"></error-output> 
-                </label>               
+                <label class="label text" for="tel">Phone Number
+                <input type="tel" id="tel" name="tel" class="input" placeholder="Enter PhoneNumber" required>
+                <error-output class ="text-error" for="text"></error-output>
+                </label>
             </div>
 
-            <!-- Adding field for address -->
+            <!--Adding field for address-->
             <div class="row-content">
-                <label class="label-text" form="address">Address
-                    <input class="input address-input" type="text" id="address" name="address" placeholder="Address" required>
-                    <error-output class="text-error" for="text"></error-output> 
-                </label>               
+                <label class="label text" for="address">Address
+                <input class="input address-input" type="text" id="address" placeholder="Address" required>
+                <error-output class ="text-error" for="text"></error-output>
+                </label>
+            
             </div>
 
             <!-- Adding input field for selecting city name and state name -->
             <div class=" select-input-fields">
-                <label class="label-text" for="city">City
+                <label class="label text" for="city">City
                     <select id="city" name="city">
                         <option value="" disabled selected hidden>Select City</option>
                         <option value="Mumbai">Mumbai</option>
@@ -79,7 +80,7 @@ Added header element on top having text AddressBook and also an image-->
                         <option value="Ratnagiri">Ratnagiri</option>
                         <option value="Bhusawal">Bhusawal</option>
                         <option value="Osmanabad">Osmanabad</option>
-                    </select>
+                    </select>   
                 </label>    
                 
 
@@ -115,7 +116,7 @@ Added header element on top having text AddressBook and also an image-->
                     <option value="Delhi">Delhi</option>
                     <option value="Ladakh">Ladakh</option>
                 </select>
-            </label>   
+                </label>   
 
                 <label class="label-text-select" for="zip">Zip Code 
                     <input class="input" type="text" id="zipcode" name="zipcode" placeholder="Zip code" required>

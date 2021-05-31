@@ -5,27 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Book Page</title>
-    <link rel="stylesheet" href="../css/home.css">  
+    <link rel="stylesheet" href="../css/home.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src = "../js/home.js"></script> 
 </head>
 <body>
-    <!--UC10 Creating header content with logo-->
+    <!--UC11 Creating header content with logo-->
     <header class="header-content header">
         <div class="logo-content">
             <img src="../assets/images/logo.jpeg" alt="">
             <div>
-                <span class="add-text">ADDRESS</span><br>
-                <span class="add-text add-book">BOOK</span>
+                <span class="address-text">ADDRESS</span><br>
+                <span class="address-text address-book">BOOK</span>
             </div>
         </div>
     </header>
-      <!--UC11 Ability to content header-->
+      <!--UC12 Ability to content header-->
       <div class="main-content">
         <div class="header-content">
             <div class="person-details-text">
-                Person Details
+                Person Details <div class="person-count">5</div>
             </div>
-            <a href="../pages/HomePage.html" class="add-button">
+            <a href="../pages/home.html" class="add-button">
                 <img src="../assets/icons/add-24px.svg" alt = "">Add Person</a>
+        </div>
+
+        <!--UC13 Creating table for viewing address book details in tabular format-->
+        <div class = "table-main">
+            <table id = "table-display" class = "table"></table>
         </div>
     </div>
 </body>
