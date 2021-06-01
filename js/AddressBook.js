@@ -59,8 +59,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             zipError.textContent = e;
         }
     });
-
-    checkForUpdate();
 });
 
 // UC-6
