@@ -1,70 +1,59 @@
-<!--UC1 Creating Address Book Form UI as web page
-Added header element on top having text AddressBook and also an image--> 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--UC1-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" href = "../assets/images/logo.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/AddressBook.css">
-    <title>Addressbook Form</title>
+    <title>Add Person</title>
 </head>
 
 <body>
+    <!-- UC-1 -->
     <header class="header-content header">
         <div class="logo-content">
             <img src="../assets/images/logo.jpeg" alt="logo">
             <div>
                 <span class="add-text">ADDRESS</span><br>
-                <span class="add-text addressbook">BOOK</span>
+                <span class="add-text add-book">BOOK</span>
             </div>
         </div>
     </header>
-
-
-    <!--UC2 Creating form with header line ADDRESS BOOK FORM-->
-    <div class="Form-content">
-        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
-            <div class="form-head">
-                <div class="header-text">PERSON ADDRESS FORM</div>
-                <div>
-                    <a href="../pages/AddressBook.html"><img class="cancel-img" src="../assets/images/icons8-cancel-40.png"></a>
-                </div>
-            </div> 
-            
-            <!--UC3 Creating fields as name address city state zip and phone number-->
-
-           <!--Adding field for full name-->
-            <div class="row-content">
-                <label class="label text" for="fullName">Full name
-                    <input class="input" type="text" id="fullName" name="fullName" placeholder="Enter Your Full Name" required>
-                    <error-output class="text-error" for="text"></error-output>  
-                </label>                  
+    <!-- UC-2 -->
+    <div class="form-content">
+        <div class="content">
+            <div class="top">
+                <div class="box">PERSON ADDRESS FORM</div>
+                <div class="push"><a href="../pages/AddressBook.html"><img src="../assets/images/icons8-cancel-40.png" alt=""></a></div>
             </div>
-
-
-            <!-- Adding field for phone number -->
+        </div>
+    </div>
+    <!-- UC-3 -->
+    <div class="form">
+        <form class="form1" action="#" onreset="resetForm()" onsubmit="save()">
             <div class="row-content">
-                <label class="label text" for="tel">Phone Number
-                <input type="tel" id="tel" name="tel" class="input" placeholder="Enter PhoneNumber" required>
-                <error-output class ="text-error" for="text"></error-output>
-                </label>
+                <label class="label-text" for="name">Full Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+                <error-output class="text-error" for="text"></error-output>
             </div>
-
-            <!--Adding field for address-->
             <div class="row-content">
-                <label class="label text" for="address">Address
-                <input class="input address-input" type="text" id="address" placeholder="Address" required>
-                <error-output class ="text-error" for="text"></error-output>
-                </label>
-            
+                <label class="label-text" for="phone">Phone Number</label>
+                <input class="input" type="text" id="phone" name="phone" placeholder="" required>
+                <error-output class="phone-error" for="text"></error-output>
             </div>
-
-            <!-- Adding input field for selecting city name and state name -->
-            <div class=" select-input-fields">
-                <label class="label text" for="city">City
-                    <select id="city" name="city">
-                        <option value="" disabled selected hidden>Select City</option>
+            <div class="row-content">
+                <label class="label-text" for="address">Address</label>
+                <input class="input-address" type="text" id="address" name="address" placeholder="" required>
+                <error-output class="add-error" for="text"></error-output>
+            </div>
+            <div class="row-content-select">
+                <div class="place">
+                    <label class="label-text" for="city">City</label>
+                    <select class="select" id="city" name="city">
+                        <option value="" selected disabled hidden>Select City</option>
                         <option value="Mumbai">Mumbai</option>
                         <option value="Pune">Pune</option>
                         <option value="Nagpur">Nagpur</option>
@@ -80,60 +69,63 @@ Added header element on top having text AddressBook and also an image-->
                         <option value="Ratnagiri">Ratnagiri</option>
                         <option value="Bhusawal">Bhusawal</option>
                         <option value="Osmanabad">Osmanabad</option>
-                    </select>   
-                </label>    
-                
+                    </select>
+                </div>
 
-                <label class="label-text-select" for="state">State
-                <select id="state" name="state">
-                    <option value="" disabled selected hidden> Select State</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                    <option value="Assam">Assam</option>
-                    <option value="Bihar">Bihar</option>
-                    <option value="Chhattisgarh">Chhattisgarh</option>
-                    <option value="Goa">Goa</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Haryana">Maharashtra</option>
-                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                    <option value="Jharkhand">Jharkhand	</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Kerala">Kerala</option>
-                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                    <option value="Manipur">Manipur</option>
-                    <option value="Meghalaya">Meghalaya</option>
-                    <option value="Mizoram">Mizoram</option>
-                    <option value="Nagaland">Nagaland</option>
-                    <option value="Odisha">Odisha</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="Sikkim">Sikkim</option>
-                    <option value="Tamil Taud">Tamil Nadu	</option>
-                    <option value="Telangana">Telangana	</option>
-                    <option value="Tripura">Tripura</option>
-                    <option value="Uttar Pradesh">Uttar Pradesh	</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="West Bengal">West Bengal	</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Ladakh">Ladakh</option>
-                </select>
-                </label>   
+                <div class="place">
+                    <label class="label-text" for="state">State</label>
+                    <select class="select" id="state" name="state">
+                        <option value="" selected disabled hidden>Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Maharashtra</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand	</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Taud">Tamil Nadu	</option>
+                        <option value="Telangana">Telangana	</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh	</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal	</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Ladakh">Ladakh</option>
+                    </select>
+                </div>
 
-                <label class="label-text-select" for="zip">Zip Code 
-                    <input class="input" type="text" id="zipcode" name="zipcode" placeholder="Zip code" required>
-                </label>
-            </div>
-
-            <!--Added buttons for saving and resetting-->
-            <div class="buttonParent">
-                <div class="submit-reset">
-                    <a href="../pages/home.html">
-                    <button type="submit" class="button submitButton" id="submitButton">Add</button>
-                    <button type="reset" class="button resetButton">Reset</button></a>
+                <div class="place">
+                    <label class="label-text" for="zip">Zip-Code</label>
+                    <input class="input" type="text" id="zip" name="zip" placeholder="" required>
+                    <error-output class="zip-error" for="text"></error-output>
                 </div>
             </div>
-        </form>
+       <!-- UC-5 -->
+            <div class="buttonParent">
+                <div class="submit-reset">
+                    <a href="../pages/home.html"><button type="submit" class="button submitButton" id="submitButton">Add</button></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+    </div>
+    </form>
     </div>
     <script defer src="../js/AddressBook.js"></script>
     <script defer src="../js/Contact.js"></script>
+
 </body>
 </html>

@@ -1,13 +1,12 @@
-/*UC1*/
+/* UC-1 */
 body{
     margin: 0;
     height: 100%;
-
 }
 
-.header {
+.header{
     padding: 15px 0;
-    background-color: #99e9e9;
+    background-color: #ffffff;
 }
 
 .header-content{
@@ -22,166 +21,215 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: row;
-    align-content: center;
     border: 0px solid #008CFF;
     width: 80%;
 }
 
-.logo-content-img{
+.logo-content > img {
+    width: 50px;
+    height: auto;
+    padding-left: 4px;
     border: solid 0px #42515f;
 }
 
-.add-text{
-    font: normal normal bold 20px/25px Montserrat;
-    font-family: "Montserrat", sans-serif;
+.add-text {
+    font: normal normal bold 20px/25px Monteserrat;
+    font-family: "Monteserrat", sans-serif;
     letter-spacing: 0px;
     color: #008CFF;
     text-transform: capitalize;
 }
 
-.addressbook{
-    color: #42515f;
+.add-book{
+    color: black;
 }
 
-*{ box-sizing: border-box;}
-
-
-/*UC2*/
-
-.form {
-    width: 55%;
-    padding: 44px 60px;
-    background: white 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px grey;
-    border: 1px solid skyblue;
-    border-radius: 8px;
-    opacity: 1;
-    margin-left: 25%;
+*{
+    box-sizing: border-box;
 }
 
-.form-head {
+/* UC-2 */
+.form-content{
+    min-height: calc(100% - 80px);
+    background-color: #f7f7f7;
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-transform: capitalize;
-    opacity: 1;
-    min-height: 90px;
+    border: 0px solid #008CFF;
+}
+
+.content{
+    width: 50%;
+    padding: 15px 60px;
     background: #008CFF 0% 0% no-repeat padding-box;
     opacity: 1;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    align-items: center;
 }
 
-.header-text {
-    font: normal normal normal 28px/37px Roboto;
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    text-align: center;
+    font: normal bold normal 18px/24px Roboto;
     letter-spacing: 0px;
-    color: white;
-    margin-left: 20%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-left: 170px;
 }
 
-.cancel-img {
-    max-width: 30px;
-    max-height: 30px;
-    cursor: pointer;
-    margin-left: 100px;
+.push{
+    width: 30px;
+    height: auto;
+    opacity: 1;
+    margin-left: auto;
 }
 
-/*UC3*/
+/* UC-3 */
+.form{
+    min-height: calc(100% - 80px);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form1{
+    width: 50%;
+    padding: 15px 60px;
+    background: white 0% 0% no-repeat;
+    opacity: 1;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    align-items: center;
+}
+
 .row-content{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 18px;
-    align-items: center;
-    border: 0px solid green;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.select-input-fields{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 18px;
-    align-items: center;
-    border: 0px solid green;
+.label-text{        
+    text-align: left;
+    font: normal normal normal 14px/18px Roboto;
+    letter-spacing: 0px;
+    color: #42515F;
+    opacity: 1;
+    text-transform: capitalize;
 }
-.label{
-    min-width: 140px;
-}
+
 label{
-    width: 100%;
-    padding: 12px 12px 12px 0;
+    padding: 12px 12px 7px 0;
     display: inline-block;
 }
-.label-text-select{
-    margin-left: 15%;
-    font-size: 16px;
-    color: #01060a;
-    opacity: 1;
-    font-family: Roboto;
-}
 
-.text{
-    font-size: 16px;
-    color: #000305;
-    opacity: 1;
-    font-family: Roboto;
-}
 .input{
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 8px;
     resize: vertical;
-}
-
-.address-input{
-    width: 100%;
-    height: 100px;
-}
-
-select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font: normal normal normal 16px Roboto;
-    letter-spacing: 0px;
-    color: #42515f;
-    background-color: transparent;
-    margin-left: 0%;
-}
-
-.buttonParent {
-    display: flex;
-    margin-bottom: 0px;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.button {
-    font-size: 20px;
-    font-family: Roboto;
-    letter-spacing: 0px;
-    color: #42515f;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
     opacity: 1;
-    background: transparent;
-    background-color: #f5f5f5;
-    border: 1px solid #707070;
-    font-weight: 400;
-    min-width: 140px;
-    padding: 7px 7px;
+}
+
+.input-address{
+    width: 100%;
+    padding: 8px;
+    height: 70px;
+    resize: vertical;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.row-content-select{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.place{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    /* row-gap: 10em; */
+}
+
+select{
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font: normal normal 14px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent ;
+}
+
+/* UC-4 */
+error-output{
+    font-family: Roboto;
+    font-size: 12px;
+    color: red;
+}
+
+/* UC-5 */
+.button{
     cursor: pointer;
 }
 
-.submitButton {
-    background-color: rgb(248, 191, 180);
-    margin-left: 400px;
+.submit-reset{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    margin-left: 287px;
 }
 
-.resetButton {
-    background-color: #6ee2ff;
-    margin-left: 5px;
+.submitButton{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font: normal normal normal 17px/23px Roboto;
+    color: #FFFFFF;
+    background: #008CFF 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    border: none;
+    opacity: 1;
 }
 
-error-output {
-    margin-left: 10px;
-    font-size: 15px;
-    font-style: bold;
-    color: red;
+.resetButton{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font: normal normal normal 17px/23px Roboto;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #FFFFFF;
+    background: #008CFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-left: auto;
+}
+
+.buttonParent{
+    display: inline-block;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 10px;
 }
