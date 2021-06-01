@@ -26,24 +26,7 @@ const createInnerHTML = () => {
   }
   document.querySelector('#table-display').innerHTML = innerHtml;
 }
-const createAddressBookJSON = () => {
-  let addressBookLocal = [
-      {
-          _name: 'Ashish Rathod',
-          _address:'Gangakhed',
-          _city: 'Pune',
-          _state: 'Maharashtra',
-          _zip: '411048',
-          _phone: '7784561230',
-      },
-      {
-          _name: 'Amol Shale',
-          _address: 'Loha',
-          _city: 'Parbhani',
-          _state: 'Maharashtra',
-          _zip: '411001',
-          _phone: '8804561230',
-      }
-  ];
-  return addressBookLocal;
+//UC-13
+const getAddressBookDataFromStorage = () => {
+  return localStorage.getItem('AddressBookList') ? JSON.parse(localStorage.getItem('AddressBookList')) : [];
 }
